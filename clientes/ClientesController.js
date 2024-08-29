@@ -110,7 +110,6 @@ router.post("/cliente/buscar", async(req, res)=>{
     if(cliente == undefined){
         cliente = await Cliente.findOne({ where: { cpf: identificador }});
     }
-    console.log(cliente);
 
     if(cliente != undefined){
         res.render("admin/clientes/buscar", {cliente: cliente});
